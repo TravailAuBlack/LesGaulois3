@@ -1,5 +1,6 @@
 package personnages;
 import java.util.*;
+import personnages.Gaulois;
 
 public class Druide {
 	private String nom;
@@ -32,14 +33,27 @@ public class Druide {
 		forcePotion = random.nextInt(effetPotionMax - effetPotionMin+1);
 		forcePotion =forcePotion + effetPotionMin;
 		if (forcePotion > 7) {
-			System.out.println("J'ai préparé une super potion de force");	
+			System.out.println("J'ai préparé une super potion de force " + forcePotion);	
 		}else {
-			System.out.println("Je n'ai pas trouvé tous les ingrédients, ma potion est seulement de force");
+			System.out.println("Je n'ai pas trouvé tous les ingrédients, ma potion est seulement de force " + forcePotion);
 		}
 		
-		
-		
-
-		
 	}
+	
+	public void booster(Gaulois gaulois) {
+		if(gaulois.getNom() == "Obélix") {
+			System.out.println(" Non, Obélix !... Tu n’auras pas de potion magique");
+		}else {
+			gaulois.boirePotion(forcePotion);
+		}
+	}
+	
+	
+	public static void main(String[] args) {
+		Druide panoramix =  new Druide("Panoramix", 5, 10);
+		panoramix.preparerPotion();
+	}
+	
+	
+	
 }
