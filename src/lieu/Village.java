@@ -25,13 +25,14 @@ public class Village {
 		nbVillageois++;
 	}
 	public Gaulois trouverHabitant(int numVillageois) {
-		return villageois[numVillageois -1]; 
+		return villageois[numVillageois ]; 
 	}
 	
 	
 	public static void main(String[] args) {
 		Village village = new Village("Village des Irréductibles" , 30);
 		Gaulois gaulois = village.trouverHabitant(30);
+		
 		
 		
 	}
