@@ -1,6 +1,7 @@
 package personnages;
 import java.util.*;
-import personnages.Gaulois;
+
+
 
 public class Druide {
 	private String nom;
